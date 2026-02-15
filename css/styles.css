@@ -1,0 +1,547 @@
+/*** Color Palette - Philomath Performing Arts ***/
+/*
+    Primary Colors (Philomath Warriors):
+    #FFB81C - Warriors Gold (navigation, headers, accents)
+    #000000 - Warriors Black (text, dark sections, footer)
+
+    Secondary Colors (adapted from PHRED):
+    #D4AF37 - Metallic Gold (buttons, highlights)
+    #FFF8DC - Cornsilk (light section backgrounds)
+    #F4F4F4 - Off-White (main backgrounds)
+    #1A1C20 - Dark Gray (footer, dark sections)
+*/
+
+:root {
+    --warriors-gold: #FFB81C;
+    --warriors-black: #000000;
+    --accent-gold: #D4AF37;
+    --light-cream: #FFF8DC;
+    --off-white: #F4F4F4;
+    --dark-gray: #1A1C20;
+    --text-dark: #333;
+    --text-light: #666;
+    --white: #ffffff;
+}
+
+html {
+    background-color: var(--off-white);
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: var(--warriors-gold);
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: var(--warriors-black);
+    margin-bottom: 1rem;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    padding-bottom: 0.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--warriors-gold);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/*** Buttons ***/
+.button-primary {
+    border: 2px solid var(--warriors-black);
+    background-color: var(--warriors-gold);
+    color: var(--warriors-black);
+    padding: 0.5rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.button-primary:hover {
+    background-color: var(--warriors-black);
+    color: var(--warriors-gold);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.button-secondary {
+    border: 2px solid var(--warriors-gold);
+    background-color: var(--white);
+    color: var(--warriors-black);
+    padding: 0.5rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.button-secondary:hover {
+    background-color: var(--warriors-gold);
+    color: var(--warriors-black);
+}
+
+/*** Layout ***/
+.content {
+    background-color: var(--off-white);
+    margin: auto;
+    max-width: 1140px;
+    padding: 0;
+}
+
+/*** Navigation Bar ***/
+.topnav {
+    background-color: var(--warriors-gold);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.navbar {
+    margin: auto;
+    max-width: 1140px;
+}
+
+.navbar-brand {
+    color: var(--warriors-black);
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+.navbar-brand img {
+    padding-right: 1rem;
+    height: 50px;
+}
+
+.navbar-nav {
+    padding-right: 1rem;
+}
+
+.nav-item {
+    font-size: 1rem;
+    font-weight: 600;
+    padding-left: 1rem;
+}
+
+.navbar-custom {
+    background-color: var(--warriors-gold);
+    color: var(--warriors-black);
+}
+
+.nav-link {
+    color: var(--warriors-black) !important;
+    transition: color 0.3s ease;
+    font-weight: 600;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--white) !important;
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 4px;
+}
+
+.dropdown-menu {
+    background-color: var(--white);
+    border: 1px solid rgba(255,184,28,0.3);
+}
+
+.dropdown-item {
+    color: var(--warriors-black);
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: var(--light-cream);
+    color: var(--warriors-gold);
+}
+
+/* Mobile dropdown fix */
+@media (max-width: 768px) {
+    .navbar-collapse .dropdown-menu {
+        position: static;
+        float: none;
+        width: auto;
+        margin-top: 0;
+        background-color: rgba(255,184,28,0.1);
+        border: none;
+    }
+
+    .navbar-collapse .dropdown-item {
+        padding-left: 2rem;
+    }
+}
+
+/*** Hero/Heading Section ***/
+.heading-content {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: var(--warriors-black);
+}
+
+.heading-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(26, 26, 26, 0.6);
+    z-index: 0;
+}
+
+.heading-section {
+    color: var(--white);
+    margin: auto;
+    max-width: 1140px;
+    padding: 2rem;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+.heading-title {
+    color: var(--white);
+    font-family: "Arial", sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    margin-bottom: 1rem;
+}
+
+.heading-subtitle {
+    font-size: 1.5rem;
+    color: var(--warriors-gold);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+}
+
+/*** Body Content ***/
+.body-content {
+    background-color: var(--off-white);
+}
+
+/*** Sections ***/
+.content section {
+    padding: 4rem 2rem;
+    font-size: 1.1rem;
+}
+
+.lightest-section {
+    background-color: var(--off-white);
+    color: var(--text-dark);
+}
+
+.light-section {
+    background-color: var(--light-cream);
+    color: var(--text-dark);
+}
+
+.dark-section {
+    background-color: var(--dark-gray);
+    color: var(--white);
+}
+
+.dark-section h2 {
+    color: var(--warriors-gold);
+}
+
+.dark-section h3 {
+    color: var(--light-cream);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid var(--warriors-gold);
+}
+
+.section-paragraph {
+    padding-bottom: 1rem;
+}
+
+/*** Calendar Table ***/
+.calendar-table {
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    width: 100%;
+}
+
+.calendar-table thead {
+    background-color: var(--warriors-gold);
+    color: var(--warriors-black);
+    font-weight: 700;
+}
+
+.calendar-table th {
+    padding: 1rem;
+    font-weight: 600;
+    text-align: left;
+}
+
+.calendar-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.calendar-table tbody tr:hover {
+    background-color: var(--light-cream);
+}
+
+/* For dark section */
+.dark-section .calendar-table {
+    background-color: var(--white);
+    color: var(--text-dark);
+}
+
+.dark-section .calendar-table a {
+    color: var(--warriors-gold);
+}
+
+/*** Contact Cards ***/
+.contact-card {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    border-left: 4px solid var(--warriors-gold);
+}
+
+.contact-card h3 {
+    color: var(--warriors-gold);
+    margin-bottom: 1rem;
+}
+
+.contact-card p {
+    margin-bottom: 0.5rem;
+}
+
+.contact-card a {
+    color: var(--warriors-gold);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-card a:hover {
+    text-decoration: underline;
+}
+
+.contact-card .button-primary {
+    color: var(--warriors-black);
+}
+
+.contact-card .button-primary:hover {
+    color: var(--warriors-gold);
+    text-decoration: none;
+}
+
+/*** Footer ***/
+.footer-section {
+    background-color: var(--dark-gray);
+    color: var(--off-white);
+    text-align: center;
+    padding: 2rem 1rem;
+    width: 100%;
+}
+
+.footer-content p {
+    margin: 0.5rem 0;
+}
+
+.footer-content a {
+    color: var(--warriors-gold);
+    text-decoration: none;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}
+
+.social-media-icon {
+    padding: 0.5rem;
+    height: 50px;
+    width: 50px;
+    transition: transform 0.3s ease;
+}
+
+.social-media-icon:hover {
+    transform: scale(1.1);
+}
+
+/*** Utility Classes ***/
+.highlight-word {
+    color: var(--warriors-gold);
+    font-weight: 600;
+}
+
+.emphasize-word {
+    font-style: italic;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.note {
+    font-style: italic;
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+/* Smooth scroll offset for fixed navbar */
+section {
+    scroll-margin-top: 80px;
+}
+
+.spaced-content {
+    padding-bottom: 2rem;
+}
+
+.centered-section {
+    justify-content: center;
+    text-align: center;
+}
+
+/*** Responsive Breakpoints ***/
+
+/* Medium screens - tablets (1145px) */
+@media (max-width: 1145px) {
+    .heading-title {
+        font-size: 3rem;
+    }
+
+    .heading-subtitle {
+        font-size: 1.3rem;
+    }
+}
+
+/* Medium mobile devices (1030px) */
+@media (max-width: 1030px) {
+    .content section {
+        padding: 3rem 1.5rem;
+    }
+}
+
+/* Small screens - tablets (768px) */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.25rem;
+    }
+
+    .navbar-brand img {
+        height: 40px;
+    }
+
+    .heading-content {
+        height: 400px;
+    }
+
+    .heading-title {
+        font-size: 2.5rem;
+    }
+
+    .heading-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .content section {
+        padding: 2rem 1rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .calendar-table {
+        font-size: 0.9rem;
+    }
+
+    .calendar-table th,
+    .calendar-table td {
+        padding: 0.5rem;
+    }
+
+    .lightest-section {
+        text-align: center;
+    }
+}
+
+/* Extra small screens - mobile (575px) */
+@media (max-width: 575px) {
+    .heading-content {
+        height: 300px;
+    }
+
+    .heading-title {
+        font-size: 1.8rem;
+    }
+
+    .heading-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .content section {
+        padding: 2rem 1rem;
+    }
+
+    .calendar-table {
+        font-size: 0.8rem;
+    }
+
+    .calendar-table th,
+    .calendar-table td {
+        padding: 0.3rem;
+    }
+
+    .contact-card {
+        padding: 1rem;
+    }
+
+    .img-responsive {
+        width: 100%;
+    }
+}
