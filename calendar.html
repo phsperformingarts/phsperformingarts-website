@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar - Philomath High School Performing Arts</title>
+
+    <meta name="description" content="PHS Performing Arts Calendar - Upcoming events and performances at Philomath High School.">
+    <link rel="icon" type="image/svg+xml" href="./assets/icons/music-note-beamed.svg">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <div class="topnav fixed-top">
+        <nav class="navbar navbar-light navbar-custom navbar-expand-md">
+            <a class="navbar-brand" href="index.html">
+                <img src="./assets/icons/music-note-beamed.svg" alt="PHS Logo">
+                PHS Performing Arts
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbar-top" aria-controls="navbar-top"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar-top">
+                <ul class="navbar-nav navbar-custom ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="programsDropdown"
+                           role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Programs
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="programsDropdown">
+                            <a class="dropdown-item" href="general-info.html">General Information</a>
+                            <a class="dropdown-item" href="jazz-band.html">Jazz Band</a>
+                            <a class="dropdown-item" href="choir.html">Choir</a>
+                            <a class="dropdown-item" href="wind-ensemble.html">Wind Ensemble</a>
+                            <a class="dropdown-item" href="pep-band.html">Pep Band</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="calendar.html">Calendar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="heading-content" style="background-image: url('./assets/img/image-36.jpg'); background-size: 150%; background-position: center center;">
+        <section class="heading-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="heading-title">Calendar</h1>
+                        <p class="heading-subtitle">Upcoming Events & Performances</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Main Content -->
+    <div class="body-content">
+        <!-- Calendar Section -->
+        <section class="dark-section">
+            <div class="content">
+                <!-- TO EDIT: Google Calendar Embed -->
+                <!--
+                INSTRUCTIONS TO ADD GOOGLE CALENDAR:
+                1. Go to Google Calendar (calendar.google.com)
+                2. Create/select your PHS Performing Arts calendar
+                3. Click the gear icon (Settings) > Settings for my calendars > [Your Calendar] > Integrate calendar
+                4. Copy the "Embed code" (the <iframe> tag)
+                5. Replace the placeholder div below with the iframe code
+
+                Example iframe format:
+                <iframe src="https://calendar.google.com/calendar/embed?src=YOUR_CALENDAR_ID"
+                        style="border: 0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+                -->
+
+                <div class="row">
+                    <div class="col-12 pt-4">
+                        <iframe src="https://calendar.google.com/calendar/u/0/embed?color=%234986e7&color=%239fc6e7&color=%23ff7537&src=philomath.k12.or.us_9si3pco3k65jbgdfimtgopkc4g@group.calendar.google.com&src=philomath.k12.or.us_g2j4mgm2gco64m1mpehkqpn0c4@group.calendar.google.com&src=philomath.k12.or.us_rdt4enbb2d8pmml6bv7u0guab0@group.calendar.google.com"
+                                style="border: 0; border-radius: 8px;"
+                                width="100%"
+                                height="600"
+                                frameborder="0"
+                                scrolling="no"></iframe>
+                    </div>
+                </div>
+
+                <!-- Alternative: Static Events Table (uncomment if you prefer to manually update events) -->
+                <!--
+                <div class="row">
+                    <div class="col-12">
+                        <table class="calendar-table table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Event</th>
+                                    <th>Ensemble</th>
+                                    <th>Location</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>March 15, 2026</td>
+                                    <td>Spring Concert</td>
+                                    <td>All Ensembles</td>
+                                    <td>PHS Auditorium</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                -->
+
+                <div class="row">
+                    <div class="col-12 text-center spaced-content" style="margin-top: 2rem;">
+                        <p class="note"><em>For more details about events, please contact Ms. Hall or check Remind 101 for updates.</em></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <section class="footer-section">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; <span id="copyright-year"></span> Philomath High School Performing Arts</p>
+                <p><a href="contact.html">Contact Us</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
