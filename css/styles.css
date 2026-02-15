@@ -469,11 +469,12 @@ section {
 /* Small screens - tablets (768px) */
 @media (max-width: 768px) {
     .navbar-brand {
-        font-size: 1.25rem;
+        font-size: 1.1rem;
     }
 
     .navbar-brand img {
-        height: 40px;
+        height: 35px;
+        padding-right: 0.5rem;
     }
 
     .heading-content {
@@ -508,10 +509,25 @@ section {
     .lightest-section {
         text-align: center;
     }
+
+    .lightest-section .button-primary,
+    .lightest-section .button-secondary {
+        display: block;
+        width: fit-content;
+        margin: 0 auto 0.75rem auto !important;
+    }
 }
 
 /* Extra small screens - mobile (575px) */
 @media (max-width: 575px) {
+    .navbar-brand {
+        font-size: 0.95rem;
+    }
+
+    .navbar-brand img {
+        height: 30px;
+    }
+
     .heading-content {
         height: 300px;
     }
