@@ -1,239 +1,72 @@
-# Philomath High School Performing Arts Website
+## PHS Performing Arts Website Development
+https://github.com/phsperformingarts/phsperformingarts-website/blob/main/README.md
 
-Welcome to the Philomath High School Performing Arts website! This modern, professional website showcases our Jazz Band, Choir, and Wind Ensemble programs.
+## How to Make Changes to the Website
 
-## Quick Start
+# Download Visual Studio Code
+Visual Studio Code (more commonly, VSCode) is a free code editor. It is an industry standard with support for many different coding languages and tools.
 
-The website consists of 7 HTML pages:
-- **index.html** - Home page
-- **general-info.html** - Program information and Remind 101
-- **jazz-band.html** - Jazz Band details
-- **choir.html** - Choir details
-- **wind-ensemble.html** - Wind Ensemble details
-- **calendar.html** - Events calendar
-- **contact.html** - Contact information
+  Go to https://code.visualstudio.com/download.
+  Click on the large button under your OS (for example, if you are on Windows, click on the button indicated in red by the image below).
 
-## Editing Content
 
-### Finding What to Edit
+# Install Visual Studio Code
+Your download should appear in the top right corner of your web browser
 
-Look for comments in the HTML files that say `<!-- TO EDIT: -->`. These mark sections you can safely edit. The text you should change is between HTML tags.
+  Double-click on the download for VSCodeUserSetup to start the installation.
+  Click the option to Accept if you agree to the Microsoft software license terms.
+  Continue with the installation accepting the default options and then click Install.
+  Once installed, you can run VSCode by searching for the app on your computer or running it from the desktop.
 
-**Example:**
-```html
-<!-- TO EDIT: Update band director information -->
-<p><strong>Name:</strong> [Director Name]</p>
-```
 
-Change to:
-```html
-<!-- TO EDIT: Update band director information -->
-<p><strong>Name:</strong> John Smith</p>
-```
 
-### Updating Text Content
+# Get Website code from GitHub
+GitHub is a website where people can work together on projects, especially for writing code or creating software. More technically, it’s version control software for managing code and code changes. 
 
-1. Open the appropriate HTML file in a text editor (Notepad++, VS Code, or even Notepad)
-2. Find the section marked with `<!-- TO EDIT: -->`
-3. Update the text between the HTML tags
-4. Save the file
-5. Refresh your web browser to see the changes
+  To see the website code, go to https://github.com/phsperformingarts/phsperformingarts-website
+  In GitHub terms, the website code is stored in its own repository.
+  The Home page of the website is created with the file, index.html.
+  Other website pages for the website are listed as well (for example, about.html and contact.html)
+  Feel free to double-click on the files or folders within the website in GitHub to explore the code.
+  To download the website code, return to VSCode
+  On the top menu, select View, then select Terminal. 
+  In the Terminal window, confirm that your current directory is your User directory
+  If on windows, you will see something like this: 
+  C:\Users\your-user-directory> 
+  If you don’t, you can get to this directory by type the following two commands into the terminal and press ENTER after each:
+  cd C:\Users\
+  dir
+  Your user directory should be listed under name. When you find it, type cd followed by the name into the terminal and press ENTER:
+   cd your-user-directory
+  Now that you are in your user directory, type the following in the Terminal window and press ENTER.
+  git clone https://github.com/phsperformingarts/phsperformingarts-website.git
 
-### Adding Calendar Events
+		When it is done, you’ll have the website code on your own computer.
+  Open the website code Visual Studio Code
+  On the top menu, select File, then select Open Folder… 
+  Find the folder called phsperformingarts-website. This should be in your user directory.
+  If you are on Windows and you can’t find it, you can type C:\Users and select your user directory. The phsperformingarts-website should be in that location
+  Select the phsperformingarts-website folder and click Select Folder
+  If successful, you will see the same files that were on GitHub. Feel free to explore the files. This is a copy of the code from GitHub and nothing you change here will affect the official website (at least not yet! 😉)
+  To see the the website on your computer
+  In the Explorer section, right click on the file index.html
+  Select Copy Path
+  Open a web browser (like Google Chrome or Firefox)
+  Paste the path that you copied into the search bar of the browser (it should look something like this: C:\Users\your-user-directory\phsperformingarts-website\index.html)
+  If successful, you will be able to navigate around the site in your browser.
 
-**File:** `calendar.html`
+# Make a change to the website code Visual Studio Code
+  In the Explorer section, click on the file index.html
+  Press CTRL+f to find some text
+  Type "Premier Concert Band” in the Find text dialog and press ENTER
+  When you find the first place where "Premier Concert Band” is mentioned, replace it with a different description
+  Press CTRL+s to save the index.html file
+  Return to your web browser, and click refresh to see the change on the home page
 
-1. Find the `<tbody>` section in the table
-2. Copy an existing row:
-```html
-<tr>
-    <td>March 15, 2026</td>
-    <td>Spring Concert</td>
-    <td>All Ensembles</td>
-    <td>PHS Auditorium</td>
-</tr>
-```
-3. Paste it below and update the information
-4. Save the file
+# Resources for learning HTML
+  W3Schools: https://www.w3schools.com/html
+  W3Schools Video Tutorial: https://www.w3schools.com/videos/index.php
+  HTML.com: https://html.com
 
-### Updating Contact Information
 
-**File:** `contact.html`
 
-Find each contact card and update the bracketed placeholders:
-- `[Director Name]` - Replace with actual name
-- `[email]` - Replace with actual email address
-- `[Phone Number]` - Replace with actual phone number
-- `[Street Address]` - Replace with actual address
-- `[ZIP Code]` - Replace with actual ZIP code
-
-### Updating Rehearsal Schedules
-
-**Files:** `jazz-band.html`, `choir.html`, `wind-ensemble.html`
-
-Find the Rehearsal Schedule section and replace:
-- `[Add days here]` - e.g., "Monday, Wednesday, Friday"
-- `[Add time here]` - e.g., "3:00 PM - 4:30 PM"
-
-### Adding Images
-
-#### Hero Images (Top of Each Page)
-
-1. Place your image file in `assets/images/backgrounds/`
-2. Name it appropriately (e.g., `hero-jazz.jpg`, `hero-choir.jpg`)
-3. In the HTML file, update the background-image URL:
-
-```html
-<div class="heading-content" style="background-image: url('./assets/images/backgrounds/hero-jazz.jpg');">
-```
-
-**Recommended image size:** 1920x600 pixels, JPEG format, compressed to ~200KB
-
-#### Content Images
-
-1. Place image in `assets/images/`
-2. Add to HTML where you want it to appear:
-
-```html
-<img src="./assets/images/your-photo.jpg" alt="Description" class="img-responsive">
-```
-
-### Changing Colors
-
-**File:** `css/styles.css`
-
-1. Open `css/styles.css`
-2. Find the `:root` section at the top (around line 17-27)
-3. Modify the color hex codes:
-
-```css
-:root {
-    --warriors-orange: #ff6600;    /* Navigation, headers */
-    --warriors-black: #1a1a1a;     /* Dark sections, text */
-    --accent-yellow: #FDD10C;      /* Buttons, highlights */
-    --light-cream: #faefcf;        /* Light backgrounds */
-    --off-white: #F4F4F4;          /* Main background */
-}
-```
-
-4. Save and refresh your browser
-
-## File Structure
-
-```
-phs-website/
-├── index.html                  # Home page
-├── general-info.html           # Program information
-├── jazz-band.html             # Jazz Band page
-├── choir.html                 # Choir page
-├── wind-ensemble.html         # Wind Ensemble page
-├── calendar.html              # Events calendar
-├── contact.html               # Contact information
-├── css/
-│   └── styles.css             # All styling
-├── js/
-│   └── script.js              # Interactive features
-├── assets/
-│   ├── images/
-│   │   ├── backgrounds/       # Hero images for each page
-│   │   └── logo/              # School logo
-│   └── icons/                 # Favicon and icons
-└── README.md                  # This file
-```
-
-## Tips for Editing
-
-### DO:
-✅ Change text between HTML tags
-✅ Update bracketed placeholders like `[Director Name]`
-✅ Add images to the `assets/images/` folder
-✅ Copy/paste table rows for new calendar events
-✅ Test changes by opening the HTML file in a web browser
-
-### DON'T:
-❌ Delete HTML tags like `<p>`, `<div>`, `<section>`
-❌ Remove CSS class names (e.g., `class="contact-card"`)
-❌ Edit the navigation menu structure
-❌ Change the Bootstrap CDN links
-❌ Modify the `<!-- TO EDIT: -->` comments (they help you find sections)
-
-## Common Tasks
-
-### Task 1: Update All Contact Information
-1. Open `contact.html`
-2. Find the three contact cards (Band Director, Choir Director, School Address)
-3. Replace all bracketed placeholders
-4. Save the file
-
-### Task 2: Add an Event to the Calendar
-1. Open `calendar.html`
-2. Find the `<tbody>` section
-3. Copy an existing `<tr>` row
-4. Paste it and update the date, event, ensemble, and location
-5. Save the file
-
-### Task 3: Update Rehearsal Schedule
-1. Open the appropriate file (`jazz-band.html`, `choir.html`, or `wind-ensemble.html`)
-2. Find "Rehearsal Schedule"
-3. Update days, time, and location
-4. Save the file
-
-### Task 4: Replace Hero Images
-1. Find/create a performing arts photo (1920x600px recommended)
-2. Save it to `assets/images/backgrounds/` with a descriptive name
-3. Open the appropriate HTML file
-4. Find the `<div class="heading-content"` line
-5. Update the `background-image: url(...)` path
-6. Save and test
-
-## Technical Details
-
-### Built With
-- **Bootstrap 4.5.0** - Responsive CSS framework
-- **jQuery 3.5.1** - JavaScript library for Bootstrap
-- **Custom CSS** - Warriors orange/black color scheme
-- **Vanilla JavaScript** - Auto-updating copyright year and active page highlighting
-
-### Features
-- ✅ Fully responsive (works on desktop, tablet, mobile)
-- ✅ Fixed navigation bar with dropdown menus
-- ✅ Professional hero sections with background images
-- ✅ Alternating section backgrounds for visual interest
-- ✅ Auto-updating copyright year
-- ✅ Active page highlighting in navigation
-- ✅ Warriors orange (#ff6600) and black (#1a1a1a) color scheme
-- ✅ Easy-to-edit content with clear markers
-
-### Browser Support
-- Chrome (recommended)
-- Firefox
-- Safari
-- Edge
-- Modern browsers with JavaScript enabled
-
-## Getting Help
-
-### For Content Updates
-Contact the band or choir directors
-
-### For Technical Issues
-Contact Philomath High School IT Department
-
-### For Website Hosting
-This website can be hosted on any web server. Simply upload all files maintaining the folder structure.
-
-## Backup
-
-**Important:** Before making major changes, create a backup:
-1. Copy the entire `phs-website` folder
-2. Rename it to `phs-website-backup-[date]`
-3. Make your changes to the original
-4. If something breaks, restore from backup
-
----
-
-**Last Updated:** February 2026
-**Version:** 2.0 (Multi-page redesign)
-**Based on:** PHRED Robotics Website Framework
-
-For questions about using this website, please refer to this README or contact your IT department.
